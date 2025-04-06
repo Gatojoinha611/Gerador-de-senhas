@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas do Skull Cummer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+    <div class="container">
+        <div class="header">
+            <h1>💀 Gerador de Senhas do Skull Cummer ⚡</h1>
+            <img src="img/caveragozador.png" alt="Caveragozador Icon" class="header-img">
+        </div>
+        <div class="theme-selector">
+            <button class="theme-btn" data-theme="dark">🌙 Dark</button>
+            <button class="theme-btn" data-theme="light">☀️ Light</button>
+            <button class="theme-btn" data-theme="hacker">👾 Hacker</button>
+        </div>
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn">📋 Copiar</button>
+            <button id="save-btn">💾 Salvar</button>
+        </div>
+        <div class="strength-meter">
+            <div id="strength-bar"></div>
+            <span id="strength-text">Força: Nenhuma <span id="strength-emoji"></span></span>
+        </div>
+        <div class="options">
+            <label>Tamanho: <input type="number" id="length" min="4" max="24" value="12"></label>
+            <label>Palavra-chave: <input type="text" id="keyword" placeholder="Digite uma palavra (opcional)">
+                <span class="tooltip">ℹ️ Use algo memorável como "Dellovinha"!</span>
+            </label>
+            <label><input type="checkbox" id="uppercase" checked> Letras Maiúsculas</label>
+            <label><input type="checkbox" id="lowercase" checked> Letras Minúsculas</label>
+            <label><input type="checkbox" id="numbers" checked> Números</label>
+            <label><input type="checkbox" id="symbols"> Símbolos</label>
+        </div>
+        <button id="generate-btn">🔑 Gerar Senha</button>
+        <button id="dice-btn">🎲 Rolar o Dado</button>
+        <button id="surprise-btn">🔮 Surpresa</button>
+        <div class="history">
+            <h3>📜 Histórico</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
